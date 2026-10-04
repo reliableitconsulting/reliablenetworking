@@ -12,8 +12,8 @@
   ]
  },
  "seo": {
-  "description": "Contact Reliable IT Consulting for a free network consultation in the Greater Seattle Area. Network assessments, Wi-Fi, office networks, security, and enterprise engineering.",
-  "title": "Contact Us | Reliable IT Consulting Seattle"
+  "title": "Contact a Seattle Network Consultant | Reliable IT Consulting",
+  "description": "Request a free network consultation in Greater Seattle. Tell us about your office network, Wi-Fi or security project — we reply within 3-5 business days."
  },
  "serviceArea": {
   "area": "Greater Seattle Area",
@@ -63,5 +63,22 @@
   "successHeading": "Thank you — we've received your request.",
   "timeline": "Desired timeline",
   "timelinePh": "e.g. Within the next month"
+ },
+ "faq": {
+  "heading": "Before You Contact Us",
+  "items": [
+   {
+    "q": "What happens after I submit the form?",
+    "a": "We review every request personally and reply within 3-5 business days, usually with a few clarifying questions or a proposed consultation time."
+   },
+   {
+    "q": "What information is most helpful to include?",
+    "a": "Your city, approximate number of employees, project timeline, and a plain description of the problem or goal — for example slow Wi-Fi, a new office, or a firewall upgrade."
+   },
+   {
+    "q": "Is the first consultation free?",
+    "a": "Yes. The initial consultation is free and comes with no obligation. If a full network assessment is useful, we will quote it clearly before starting."
+   }
+  ]
  }
 }

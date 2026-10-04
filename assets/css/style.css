@@ -337,3 +337,9 @@ a { color: var(--blue); }
   .btn-row .btn { flex: 1 1 100%; }
   .hero { padding: 3rem 0; }
 }
+
+/* FAQ (SEO content blocks) */
+.faq-list { display: grid; gap: 1rem; margin-top: 2rem; text-align: left; }
+.faq-item { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1.1rem 1.25rem; }
+.faq-item h3 { margin: 0 0 0.45rem; font-size: 1.05rem; }
+.faq-item p { margin: 0; }
