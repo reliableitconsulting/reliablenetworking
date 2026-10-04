@@ -775,4 +775,8 @@ writeFileSync(
 // assets
 cpSync(join(root, 'assets'), join(dist, 'assets'), { recursive: true });
 
+// Pages Functions must live inside the uploaded directory ('dist/functions'),
+// otherwise 'wrangler pages deploy dist' silently ships no Functions at all.
+cpSync(join(root, 'functions'), join(dist, 'functions'), { recursive: true });
+
 console.log(`\nDone. ${sitemapUrls.length} pages -> dist/`);
