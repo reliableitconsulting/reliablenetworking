@@ -1,0 +1,42 @@
+{
+ "privacy": {
+  "sections": [
+   {
+    "heading": "Information we collect",
+    "text": "When you submit our contact form, we collect the information you provide — such as your name, company, email address, phone number, and project details — so we can respond to your inquiry."
+   },
+   {
+    "heading": "How we use it",
+    "text": "We use your information only to communicate with you about your inquiry and our services. We do not sell your personal information."
+   },
+   {
+    "heading": "Data storage",
+    "text": "Form submissions are emailed to us through our email service provider. We retain inquiry records only as long as needed for business purposes."
+   },
+   {
+    "heading": "Your choices",
+    "text": "You may ask us to update or delete your personal information at any time by contacting us through the website."
+   }
+  ],
+  "title": "Privacy Policy",
+  "updated": "Last updated: September 2026"
+ },
+ "terms": {
+  "sections": [
+   {
+    "heading": "Services",
+    "text": "Reliable IT Consulting provides network consulting, design, installation, and support services as described on this website. Specific scope, pricing, and timelines are confirmed in writing before work begins."
+   },
+   {
+    "heading": "Pricing",
+    "text": "Starting prices shown on this website are estimates for typical projects. Your actual quote depends on the scope of work, site conditions, and equipment requirements."
+   },
+   {
+    "heading": "Website content",
+    "text": "Content on this website is for general information only and does not constitute professional advice for your specific situation."
+   }
+  ],
+  "title": "Terms of Service",
+  "updated": "Last updated: September 2026"
+ }
+}

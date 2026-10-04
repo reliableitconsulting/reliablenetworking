@@ -1,0 +1,24 @@
+{
+ "baseUrl": "https://www.reliableitconsulting.com",
+ "defaultLocale": "en",
+ "languagesNote": "English & Mandarin",
+ "locales": [
+  "en",
+  "zh"
+ ],
+ "serviceArea": "Greater Seattle Area",
+ "serviceCities": [
+  "Seattle",
+  "Bellevue",
+  "Redmond",
+  "Kirkland",
+  "Renton",
+  "Issaquah",
+  "Bothell",
+  "Lynnwood",
+  "Everett",
+  "Tacoma"
+ ],
+ "siteName": "Reliable IT Consulting",
+ "tagline": "Enterprise Networking for Growing Businesses"
+}

@@ -1,0 +1,67 @@
+{
+ "fieldsNote": "表单将收集：姓名、公司、邮箱、电话、公司地址、员工人数、所需服务、项目描述、期望时间、首选联系方式。",
+ "formHeading": "预约免费咨询",
+ "heading": "聊聊您的网络需求",
+ "intro": "告诉我们您正在做什么。无论您需要网络评估、新办公室搭建、Wi-Fi 优化、故障排查，还是持续的网络运维支持，我们都会帮您找到合适的下一步。",
+ "nextSteps": {
+  "heading": "接下来会发生什么",
+  "steps": [
+   "我们会在一个工作日内审核您的需求。",
+   "我们会安排一次简短通话，了解您的具体需求。",
+   "您将获得清晰的下一步建议和透明的报价。"
+  ]
+ },
+ "seo": {
+  "description": "联系 Reliable IT Consulting，预约大西雅图地区的免费网络咨询。网络评估、Wi-Fi、办公网络、安全与企业网络工程。",
+  "title": "联系我们 | Reliable IT Consulting 西雅图"
+ },
+ "serviceArea": {
+  "area": "大西雅图地区",
+  "heading": "服务范围",
+  "remote": "支持远程咨询。"
+ },
+ "form": {
+  "contactMethod": "首选联系方式",
+  "contactMethodOptions": [
+   "电子邮件",
+   "电话",
+   "都可以"
+  ],
+  "company": "公司名称",
+  "companyPh": "某某公司",
+  "description": "项目描述",
+  "descriptionPh": "请介绍一下您目前的网络状况以及希望改进的地方…",
+  "email": "工作邮箱",
+  "emailPh": "zhang@company.com",
+  "employees": "员工人数",
+  "employeesPh": "例如：25",
+  "errorBody": "您的请求暂时无法发送，请稍后重试，或通过本页的其他方式联系我们。",
+  "errorHeading": "发送失败",
+  "location": "公司地址",
+  "locationPh": "Bellevue, WA",
+  "name": "姓名",
+  "namePh": "张伟",
+  "optional": "选填",
+  "phone": "电话",
+  "phonePh": "(206) 555-0100",
+  "required": "必填",
+  "sending": "发送中…",
+  "service": "所需服务",
+  "serviceOptions": [
+   "网络评估",
+   "企业 Wi-Fi",
+   "办公室网络搭建 / 搬迁",
+   "故障排查",
+   "网络安全",
+   "综合布线",
+   "网络运维套餐",
+   "企业网络工程",
+   "咨询 / 其他"
+  ],
+  "submit": "预约免费咨询",
+  "successBody": "我们会尽快审核您的需求，并在一个工作日内回复您。",
+  "successHeading": "感谢您 — 我们已收到您的请求。",
+  "timeline": "期望时间",
+  "timelinePh": "例如：一个月内"
+ }
+}
