@@ -43,14 +43,14 @@ const CONFIRM = {
     subject: 'We received your consultation request — Reliable IT Consulting',
     body: (name) =>
       `Hi ${name},\n\nThanks for reaching out to Reliable IT Consulting. ` +
-      `We've received your request and will review it — expect to hear from us within one business day.\n\n` +
+      `We've received your request and will review it — expect to hear from us within 3-5 business days.\n\n` +
       `— Reliable IT Consulting, Greater Seattle Area`,
   },
   zh: {
     subject: '我们已收到您的咨询请求 — Reliable IT Consulting',
     body: (name) =>
       `${name}，您好：\n\n感谢您联系 Reliable IT Consulting。我们已收到您的咨询请求并将尽快审核，` +
-      `预计在一个工作日内回复您。\n\n— Reliable IT Consulting，大西雅图地区`,
+      `预计在 3–5 个工作日内回复您。\n\n— Reliable IT Consulting，大西雅图地区`,
   },
 };
 
@@ -60,8 +60,8 @@ function thankYouPage(locale, ok) {
     ? zh ? '已收到您的请求' : 'Request received'
     : zh ? '发送失败' : 'Something went wrong';
   const body = ok
-    ? zh ? '我们已收到您的咨询请求，将在一个工作日内回复您。'
-         : 'We received your consultation request and will reply within one business day.'
+    ? zh ? '我们已收到您的咨询请求，将在 3–5 个工作日内回复您。'
+         : 'We received your consultation request and will reply within 3-5 business days.'
     : zh ? '请求未能发送，请稍后重试。'
          : 'Your request could not be sent. Please try again later.';
   return new Response(

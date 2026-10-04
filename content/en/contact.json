@@ -6,7 +6,7 @@
  "nextSteps": {
   "heading": "What happens next",
   "steps": [
-   "We review your request — usually within one business day.",
+   "We review your request — usually within 3-5 business days.",
    "We schedule a brief call to understand your needs.",
    "You get clear next steps and straightforward pricing."
   ]
@@ -59,7 +59,7 @@
    "Consulting / Other"
   ],
   "submit": "Request a Free Consultation",
-  "successBody": "We'll review your request and get back to you within one business day.",
+  "successBody": "We'll review your request and get back to you within 3-5 business days.",
   "successHeading": "Thank you — we've received your request.",
   "timeline": "Desired timeline",
   "timelinePh": "e.g. Within the next month"
