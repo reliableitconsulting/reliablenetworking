@@ -24,8 +24,7 @@
   "contactMethod": "首选联系方式",
   "contactMethodOptions": [
    "电子邮件",
-   "电话",
-   "都可以"
+   "电话"
   ],
   "company": "公司名称",
   "companyPh": "某某公司",

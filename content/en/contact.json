@@ -24,8 +24,7 @@
   "contactMethod": "Preferred contact method",
   "contactMethodOptions": [
    "Email",
-   "Phone",
-   "Either"
+   "Phone"
   ],
   "company": "Company",
   "companyPh": "Acme Inc.",

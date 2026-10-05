@@ -438,14 +438,15 @@ function renderContact({ locale, site, c }) {
       data-error-heading="${esc(f.errorHeading)}" data-error-body="${esc(f.errorBody)}"
       data-error-not-configured="${esc(f.errNotConfigured)}" data-error-send-failed="${esc(f.errSendFailed)}"
       data-error-endpoint="${esc(f.errEndpoint)}" data-error-validation="${esc(f.errValidation)}"
-      data-error-rate-limited="${esc(f.errRateLimited)}">
+      data-error-rate-limited="${esc(f.errRateLimited)}" data-required-label="${esc(f.required)}" data-optional-label="${esc(f.optional)}">
     <div class="field-row">
       ${field('name', f.name, 'text', f.namePh, true, ' autocomplete="name"')}
       ${field('company', f.company, 'text', f.companyPh, false, ' autocomplete="organization"')}
     </div>
     <div class="field-row">
       ${field('email', f.email, 'email', f.emailPh, true, ' autocomplete="email"')}
-      ${field('phone', f.phone, 'tel', f.phonePh, true, ' autocomplete="tel"')}
+      <div class="field"><label for="inq-phone">${esc(f.phone)} <span class="req" id="phone-req" aria-hidden="true" hidden>*</span><span class="opt" id="phone-opt">(${esc(f.optional)})</span></label>
+      <input id="inq-phone" name="phone" type="tel" placeholder="${esc(f.phonePh)}" autocomplete="tel"></div>
     </div>
     <div class="field-row">
       ${field('location', f.location, 'text', f.locationPh, false)}
@@ -456,8 +457,7 @@ function renderContact({ locale, site, c }) {
         <select id="inq-service" name="service" required><option value="" disabled selected>—</option>
         ${opt(f.serviceOptions)}</select></div>
       <div class="field"><label for="inq-contactMethod">${esc(f.contactMethod)} <span class="opt">(${esc(f.optional)})</span></label>
-        <select id="inq-contactMethod" name="contactMethod"><option value="" disabled selected>—</option>
-        ${opt(f.contactMethodOptions)}</select></div>
+        <select id="inq-contactMethod" name="contactMethod"><option value="email" selected>${esc(f.contactMethodOptions[0])}</option><option value="phone">${esc(f.contactMethodOptions[1])}</option></select></div>
     </div>
     <div class="field"><label for="inq-timeline">${esc(f.timeline)} <span class="opt">(${esc(f.optional)})</span></label>
       <input id="inq-timeline" name="timeline" type="text" placeholder="${esc(f.timelinePh)}"></div>

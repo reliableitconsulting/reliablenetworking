@@ -118,7 +118,8 @@ export async function onRequestPost(context) {
   const missing = [];
   if (!name) missing.push('name');
   if (!validEmail(email)) missing.push('email');
-  if (!phone || phone.replace(/\D/g, '').length < 7) missing.push('phone');
+  const prefersPhone = contactMethod === 'phone' || /phone|电话/i.test(contactMethod);
+  if (prefersPhone && (!phone || phone.replace(/\D/g, '').length < 7)) missing.push('phone');
   if (!service) missing.push('service');
   if (!description) missing.push('description');
   if (missing.length) {
@@ -128,8 +129,13 @@ export async function onRequestPost(context) {
   }
 
   if (!env.RESEND_API_KEY || !env.INQUIRY_TO) {
+    const missingVars = [
+      !env.RESEND_API_KEY && 'RESEND_API_KEY',
+      !env.INQUIRY_TO && 'INQUIRY_TO',
+    ].filter(Boolean);
+    console.error('inquiry not_configured, missing env vars:', missingVars.join(', '));
     return wantsJson
-      ? json({ ok: false, error: 'not_configured' }, 503)
+      ? json({ ok: false, error: 'not_configured', missing: missingVars }, 503)
       : thankYouPage(locale, false);
   }
 

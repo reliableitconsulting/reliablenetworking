@@ -42,6 +42,18 @@
   // Inquiry form: submit via fetch to the /api/inquiry Pages Function
   var form = document.getElementById('inquiry-form');
   if (form) {
+    var phoneInput = document.getElementById('inq-phone');
+    var methodInput = document.getElementById('inq-contactMethod');
+    var phoneReq = document.getElementById('phone-req');
+    var phoneOpt = document.getElementById('phone-opt');
+    var syncPhoneRequired = function () {
+      var byPhone = !!(methodInput && methodInput.value === 'phone');
+      if (phoneInput) phoneInput.required = byPhone;
+      if (phoneReq) phoneReq.hidden = !byPhone;
+      if (phoneOpt) phoneOpt.textContent = '(' + (byPhone ? (form.dataset.requiredLabel || 'required') : (form.dataset.optionalLabel || 'optional')) + ')';
+    };
+    if (methodInput) methodInput.addEventListener('change', syncPhoneRequired);
+    syncPhoneRequired();
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var status = document.getElementById('form-status');
@@ -68,8 +80,11 @@
       btn.textContent = form.dataset.sending || 'Sending…';
       status.className = 'form-status';
       status.innerHTML = '';
-      var bodyForError = function (code) {
-        if (code === 'not_configured') return form.dataset.errorNotConfigured || form.dataset.errorBody;
+      var bodyForError = function (code, missing) {
+        if (code === 'not_configured') {
+          const base = form.dataset.errorNotConfigured || form.dataset.errorBody;
+          return missing && missing.length ? `${base} (Missing: ${missing.join(', ')})` : base;
+        }
         if (code === 'send_failed') return form.dataset.errorSendFailed || form.dataset.errorBody;
         if (code === 'validation') return form.dataset.errorValidation || form.dataset.errorBody;
         if (code === 'rate_limited') return form.dataset.errorRateLimited || form.dataset.errorBody;
@@ -82,7 +97,7 @@
       })
         .then(function (r) {
           return r.json()
-            .then(function (j) { return { ok: r.ok && j.ok, code: j.error || '' }; })
+            .then(function (j) { return { ok: r.ok && j.ok, code: j.error || '', missing: j.missing || [] }; })
             .catch(function () { return { ok: false, code: 'endpoint_unreachable' }; });
         })
         .then(function (res) {
@@ -90,7 +105,7 @@
             form.reset();
             setStatus('ok', form.dataset.successHeading, form.dataset.successBody);
           } else {
-            setStatus('err', form.dataset.errorHeading, bodyForError(res.code));
+            setStatus('err', form.dataset.errorHeading, bodyForError(res.code, res.missing));
           }
         })
         .catch(function () {
