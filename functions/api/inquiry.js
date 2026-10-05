@@ -175,6 +175,9 @@ export async function onRequestPost(context) {
     ownerRes = { ok: false };
   }
   if (!ownerRes.ok) {
+    let detail = '';
+    try { detail = (await ownerRes.text()).slice(0, 300); } catch { /* keep detail empty */ }
+    console.error('inquiry owner-send failed', ownerRes.status || 'no-status', detail);
     return wantsJson
       ? json({ ok: false, error: 'send_failed' }, 502)
       : thankYouPage(locale, false);

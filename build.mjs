@@ -435,7 +435,10 @@ function renderContact({ locale, site, c }) {
   const formBlock = `<form id="inquiry-form" class="inquiry-form" action="/api/inquiry" method="post"
       data-sending="${esc(f.sending)}" data-submit="${esc(f.submit)}"
       data-success-heading="${esc(f.successHeading)}" data-success-body="${esc(f.successBody)}"
-      data-error-heading="${esc(f.errorHeading)}" data-error-body="${esc(f.errorBody)}">
+      data-error-heading="${esc(f.errorHeading)}" data-error-body="${esc(f.errorBody)}"
+      data-error-not-configured="${esc(f.errNotConfigured)}" data-error-send-failed="${esc(f.errSendFailed)}"
+      data-error-endpoint="${esc(f.errEndpoint)}" data-error-validation="${esc(f.errValidation)}"
+      data-error-rate-limited="${esc(f.errRateLimited)}">
     <div class="field-row">
       ${field('name', f.name, 'text', f.namePh, true, ' autocomplete="name"')}
       ${field('company', f.company, 'text', f.companyPh, false, ' autocomplete="organization"')}

@@ -68,24 +68,33 @@
       btn.textContent = form.dataset.sending || 'Sending…';
       status.className = 'form-status';
       status.innerHTML = '';
+      var bodyForError = function (code) {
+        if (code === 'not_configured') return form.dataset.errorNotConfigured || form.dataset.errorBody;
+        if (code === 'send_failed') return form.dataset.errorSendFailed || form.dataset.errorBody;
+        if (code === 'validation') return form.dataset.errorValidation || form.dataset.errorBody;
+        if (code === 'rate_limited') return form.dataset.errorRateLimited || form.dataset.errorBody;
+        return form.dataset.errorEndpoint || form.dataset.errorBody;
+      };
       fetch('/api/inquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       })
         .then(function (r) {
-          return r.json().then(function (j) { return { ok: r.ok && j.ok, body: j }; });
+          return r.json()
+            .then(function (j) { return { ok: r.ok && j.ok, code: j.error || '' }; })
+            .catch(function () { return { ok: false, code: 'endpoint_unreachable' }; });
         })
         .then(function (res) {
           if (res.ok) {
             form.reset();
             setStatus('ok', form.dataset.successHeading, form.dataset.successBody);
           } else {
-            throw new Error((res.body && res.body.error) || 'send_failed');
+            setStatus('err', form.dataset.errorHeading, bodyForError(res.code));
           }
         })
         .catch(function () {
-          setStatus('err', form.dataset.errorHeading, form.dataset.errorBody);
+          setStatus('err', form.dataset.errorHeading, bodyForError('endpoint_unreachable'));
         })
         .finally(function () {
           btn.disabled = false;

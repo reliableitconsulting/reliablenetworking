@@ -62,7 +62,12 @@
   "successBody": "We'll review your request and get back to you within 3-5 business days.",
   "successHeading": "Thank you — we've received your request.",
   "timeline": "Desired timeline",
-  "timelinePh": "e.g. Within the next month"
+  "timelinePh": "e.g. Within the next month",
+  "errNotConfigured": "The email service isn't configured yet on the server, so your message wasn't sent. Please notify the site owner.",
+  "errSendFailed": "The email service rejected the message, so it wasn't sent. Please let the site owner know.",
+  "errEndpoint": "The form endpoint can't be reached right now (it may still be deploying). Please wait a couple of minutes and try again.",
+  "errValidation": "Please check the required fields and try again.",
+  "errRateLimited": "Too many submissions from this connection — please try again in a little while."
  },
  "faq": {
   "heading": "Before You Contact Us",

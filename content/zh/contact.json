@@ -62,7 +62,12 @@
   "successBody": "我们会尽快审核您的需求，并在 3–5 个工作日内回复您。",
   "successHeading": "感谢您 — 我们已收到您的请求。",
   "timeline": "期望时间",
-  "timelinePh": "例如：一个月内"
+  "timelinePh": "例如：一个月内",
+  "errNotConfigured": "服务器上的邮件服务还没有配置完成，您的消息没有发出去，请通知网站负责人。",
+  "errSendFailed": "邮件服务拒收了这封邮件，消息没有发出去，请通知网站负责人。",
+  "errEndpoint": "暂时联系不到表单接口（可能还在部署中），请等两分钟再试一次。",
+  "errValidation": "请检查必填项填写是否完整，再试一次。",
+  "errRateLimited": "这个连接提交次数过多，请过一会儿再试。"
  },
  "faq": {
   "heading": "联系前常见问题",
