@@ -62,7 +62,7 @@ No Gmail address is exposed anywhere on the site.
 ### Behavior notes
 
 - Validates required fields (name, email, service, description), enforces a
-  honeypot + minimum-fill-time anti-spam check, and rate-limits 10
+  honeypot anti-spam check, and rate-limits 10
   submissions/IP/hour.
 - Owner email sets `Reply-To` to the inquirer's address, so hitting reply
   reaches them directly.

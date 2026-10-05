@@ -42,7 +42,6 @@
   // Inquiry form: submit via fetch to the /api/inquiry Pages Function
   var form = document.getElementById('inquiry-form');
   if (form) {
-    var loadedAt = Date.now();
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var status = document.getElementById('form-status');
@@ -64,7 +63,6 @@
       }
       var payload = {};
       new FormData(form).forEach(function (v, k) { payload[k] = v; });
-      payload._ts = loadedAt;
       var original = btn.textContent;
       btn.disabled = true;
       btn.textContent = form.dataset.sending || 'Sending…';

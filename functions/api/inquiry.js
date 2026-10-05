@@ -101,12 +101,6 @@ export async function onRequestPost(context) {
     return wantsJson ? json({ ok: true }) : thankYouPage(data.locale === 'zh' ? 'zh' : 'en', true);
   }
 
-  // Timestamp check: reject forms submitted implausibly fast (< 2.5s)
-  const ts = Number(data._ts);
-  if (ts && Date.now() - ts < 2500) {
-    return wantsJson ? json({ ok: true }) : thankYouPage(data.locale === 'zh' ? 'zh' : 'en', true);
-  }
-
   const name = str(data.name, 100);
   const email = str(data.email, 160);
   const service = str(data.service, 80);
