@@ -1,1 +1,92 @@
-{"ctaBand":{"primary":"预约免费咨询","primaryHref":"/contact/","secondary":"查看服务","secondaryHref":"/services/","text":"无论您是开设新办公室、升级网络、解决 Wi-Fi 问题，还是规划大型基础设施项目，我们随时为您提供帮助。","title":"让我们共建更优质的网络"},"footer":{"area":"大西雅图地区","companyHeading":"公司","contactHeading":"联系方式","languages":"提供中英文服务","privacy":"隐私政策","remote":"支持远程咨询","rights":"版权所有。","serviceLinks":[{"href":"/services/#network-assessment","label":"网络评估"},{"href":"/services/#business-wifi","label":"企业 Wi-Fi"},{"href":"/services/#office-network-setup","label":"办公网络搭建"},{"href":"/services/#network-security","label":"网络安全"},{"href":"/services/#enterprise-network-engineering","label":"网络工程"}],"servicesHeading":"服务","tagline":"为成长型企业提供企业级网络服务","terms":"服务条款"},"headerCta":"预约免费咨询","headerCtaHref":"/contact/","lang":"zh-CN","langLabel":"语言","menuClose":"关闭菜单","menuOpen":"打开菜单","nav":[{"href":"/","id":"home","label":"首页"},{"href":"/services/","id":"services","label":"服务"},{"href":"/industries/","id":"industries","label":"行业方案"},{"href":"/network-care/","id":"network-care","label":"网络运维"},{"href":"/about/","id":"about","label":"关于我们"},{"href":"/contact/","id":"contact","label":"联系我们"}],"ogLocale":"zh_CN","skipLink":"跳转到主要内容"}
+{
+ "ctaBand": {
+  "primary": "预约免费咨询",
+  "primaryHref": "/contact/",
+  "secondary": "查看服务",
+  "secondaryHref": "/services/",
+  "text": "无论您是要开新办公室、解决 Wi-Fi 问题、加强远程访问安全、加一条备用网络，还是规划更大的网络项目，我们都可以帮您。",
+  "title": "让我们共建更优质的网络"
+ },
+ "footer": {
+  "area": "大西雅图地区",
+  "companyHeading": "公司",
+  "contactHeading": "联系方式",
+  "languages": "提供中英文服务",
+  "privacy": "隐私政策",
+  "remote": "支持远程咨询",
+  "rights": "版权所有。",
+  "serviceLinks": [
+   {
+    "href": "/services/#network-assessment",
+    "label": "网络评估"
+   },
+   {
+    "href": "/services/#business-wifi",
+    "label": "企业 Wi-Fi"
+   },
+   {
+    "href": "/services/#office-network-setup",
+    "label": "办公网络搭建"
+   },
+   {
+    "href": "/services/#network-security",
+    "label": "网络安全"
+   },
+   {
+    "href": "/services/#enterprise-network-engineering",
+    "label": "网络工程"
+   },
+   {
+    "href": "/services/#backup-internet-continuity",
+    "label": "备用互联网"
+   },
+   {
+    "href": "/services/#network-security-checkup",
+    "label": "网络安全体检"
+   }
+  ],
+  "servicesHeading": "服务",
+  "tagline": "为成长型企业提供企业级网络服务",
+  "terms": "服务条款"
+ },
+ "headerCta": "预约免费咨询",
+ "headerCtaHref": "/contact/",
+ "lang": "zh-CN",
+ "langLabel": "语言",
+ "menuClose": "关闭菜单",
+ "menuOpen": "打开菜单",
+ "nav": [
+  {
+   "href": "/",
+   "id": "home",
+   "label": "首页"
+  },
+  {
+   "href": "/services/",
+   "id": "services",
+   "label": "服务"
+  },
+  {
+   "href": "/industries/",
+   "id": "industries",
+   "label": "行业方案"
+  },
+  {
+   "href": "/network-care/",
+   "id": "network-care",
+   "label": "网络运维"
+  },
+  {
+   "href": "/about/",
+   "id": "about",
+   "label": "关于我们"
+  },
+  {
+   "href": "/contact/",
+   "id": "contact",
+   "label": "联系我们"
+  }
+ ],
+ "ogLocale": "zh_CN",
+ "skipLink": "跳转到主要内容"
+}

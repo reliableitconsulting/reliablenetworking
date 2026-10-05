@@ -345,8 +345,23 @@ function renderServices({ locale, site, c }) {
     </section>`
     )
     .join('\n');
+  const guides = s.guides
+    ? `<section class="section section-alt"><div class="container">
+    <h2 class="section-title">${esc(s.guides.heading)}</h2>
+    <p class="section-sub">${esc(s.guides.intro)}</p>
+    <div class="guide-grid">${s.guides.items
+      .map(
+        (g) => `<article class="guide-card reveal">
+        <h3>${esc(g.title)}</h3>
+        <p>${esc(g.body)}</p>
+        <p class="guide-check"><strong>${esc(s.guides.checkLabel)}:</strong> ${esc(g.check)}</p>
+      </article>`
+      )
+      .join('\n')}</div>
+  </div></section>`
+    : '';
   return `${pageHero(s.heading, s.intro)}
-<section class="section"><div class="container">${cats}</div></section>${faqSection(locale, s.faq)}`;
+<section class="section"><div class="container">${cats}</div></section>${guides}${faqSection(locale, s.faq)}`;
 }
 
 // ---------------------------------------------------------------- industries
@@ -665,7 +680,7 @@ const llmsLines = [
   '',
   '> ' + config.tagline + '. Network consulting, office network setup, business Wi-Fi, structured cabling, network security, and managed network monitoring for businesses in the ' + config.serviceArea + '. English & Mandarin support.',
   '',
-  'Problems we solve: slow or unreliable office Wi-Fi, new office and relocation network buildouts, aging network infrastructure upgrades, structured cabling (Cat6, Cat6A, fiber), firewall/VPN and secure remote access, and 24/7 proactive network monitoring.',
+  'Problems we solve: slow or unreliable office Wi-Fi, new office and relocation network buildouts, aging network infrastructure upgrades, structured cabling (Cat6, Cat6A, fiber), firewall/VPN security checkups and secure remote access, backup Internet and failover for business continuity, and 24/7 automated network monitoring.',
   '',
   'Key facts: Service area is ' + config.serviceCities.join(', ') + ' (Greater Seattle Area, WA). Support is available in English and Mandarin. All services and Network Care plans are custom-quoted — no prices are published on this website. The first consultation is free. Consultation requests submitted through the contact form are answered within 3-5 business days.',
   '',
@@ -722,6 +737,7 @@ for (const loc of ['en', 'zh']) {
       full.push(`- ${s.name} (${s.price}): ${s.desc}` + (s.includes ? ' Includes: ' + s.includes.join('; ') + '.' : ''));
     }
   }
+  if (svc.guides) { full.push(`### ${svc.guides.heading}`); full.push(svc.guides.intro); for (const g of svc.guides.items) { full.push(`- ${g.title}: ${g.body} ${svc.guides.checkLabel}: ${g.check}`); } }
   if (svc.faq) { full.push(`### ${svc.faq.heading}`); for (const f of svc.faq.items) { full.push(`Q: ${f.q}`); full.push(`A: ${f.a}`); } }
   full.push('');
   full.push(`### ${care.heading}`);

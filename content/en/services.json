@@ -1,1 +1,362 @@
-{"categories":[{"id":"assess","name":"Assess","services":[{"cta":"Request a Free Consultation","desc":"Evaluate your current network and identify opportunities for improvement.","id":"network-assessment","includes":["Network health assessment","Internet and Wi-Fi performance review","Equipment and security review","Network diagram","Recommendations report"],"name":"Network Assessment","price":"Custom Quote"},{"cta":"Request a Free Consultation","desc":"Expert guidance for office expansions, new offices, modernization, and infrastructure planning.","id":"consulting-planning","includes":["Office expansion planning","New office planning","Network modernization","Infrastructure review","Vendor evaluation","Project planning"],"name":"Consulting & Project Planning","price":"Custom Quote"}],"tagline":"Understand where your network stands — and where it should go."},{"id":"build","name":"Build","services":[{"bestFor":"5–50 employees","cta":"Request a Free Consultation","desc":"Complete network installation for new or expanding offices.","id":"office-network-setup","includes":["Firewall and router setup","Managed switches","Business Wi-Fi","Guest Wi-Fi","VLAN configuration","Network documentation"],"name":"Office Network Setup","price":"Custom Quote"},{"cta":"Request a Free Consultation","desc":"Fast, reliable wireless designed around your space and how your team works.","id":"business-wifi","includes":["Wi-Fi site survey","Coverage analysis","Access point placement","Performance optimization","New Wi-Fi deployment"],"name":"Business Wi-Fi Solutions","price":"Custom Quote"},{"cta":"Request a Free Consultation","desc":"Professional cabling infrastructure, installed right the first time.","id":"structured-cabling","includes":["Cat6, Cat6A, and fiber","Patch panels","Network racks","Cable management","Labeling","Testing","Documentation"],"name":"Structured Cabling","price":"Custom Quote"},{"cta":"Request a Free Consultation","desc":"Move your network without the downtime.","id":"office-relocation","includes":["Network planning","ISP coordination","Equipment relocation","Installation and testing","Post-move support"],"name":"Office Relocation","price":"Custom Quote"}],"tagline":"New office, expansion, or relocation — built on a solid foundation."},{"id":"manage","name":"Manage","services":[{"cta":"Request a Free Consultation","desc":"Fast, expert diagnosis when something isn't working.","id":"network-troubleshooting","includes":["Slow Internet","Wi-Fi problems","VPN connectivity","Firewall issues","Network outages","Routing problems","Performance bottlenecks"],"includesLabel":"Common issues we resolve","name":"Network Troubleshooting","price":"Custom Quote"},{"cta":"Request a Free Consultation","desc":"See what's happening on your network — before problems find you.","id":"monitoring-setup","includes":["Device onboarding","Monitoring platform configuration","Alert configuration","Configuration backup","Device inventory","Network baseline","Dashboard setup"],"name":"Network Monitoring Setup","price":"Custom Quote"},{"cta":"View Network Care Plans","ctaHref":"/network-care/","desc":"Proactive monitoring and maintenance for small businesses.","id":"network-care-essential","link":true,"name":"Network Care Essential","price":"Custom Quote"},{"cta":"View Network Care Plans","ctaHref":"/network-care/","desc":"Proactive monitoring plus engineer support for growing businesses.","id":"network-care-professional","link":true,"name":"Network Care Professional","price":"Custom Quote"}],"tagline":"Keep day-to-day operations running smoothly."},{"id":"secure","name":"Secure & Advanced","services":[{"cta":"Request a Free Consultation","desc":"Protect your business with properly designed network security.","id":"network-security","includes":["Firewall deployment","Firewall policy review","VPN configuration","Network segmentation","Guest network isolation","Secure remote access","Security assessment"],"name":"Network Security","price":"Custom Quote"},{"cta":"Request a Free Consultation","desc":"Advanced networking services for complex environments.","id":"enterprise-network-engineering","includes":["Network architecture","Routing & switching","BGP","OSPF","Multi-ISP","SD-WAN","High availability","VPN design","Cloud networking","Azure networking","AWS networking","Network automation"],"includesLabel":"Services","name":"Enterprise Network Engineering","price":"Custom Quote","technologies":["Cisco","Juniper","Palo Alto","Fortinet","Aruba","Ubiquiti","Meraki"],"technologiesLabel":"Technologies we work with"}],"tagline":"Serious protection and serious engineering for demanding environments."}],"heading":"Our Services","intro":"From a single office Wi-Fi upgrade to complex enterprise infrastructure, every engagement starts with understanding your business — then designing a network that fits.","seo":{"title":"Network Services in Seattle: Wi-Fi, Cabling & Security | Reliable IT Consulting","description":"Office network setup, business Wi-Fi, structured cabling, firewall & VPN security, troubleshooting and monitoring for Seattle-area businesses. Custom quotes."},"faq":{"heading":"Network Services FAQs","items":[{"q":"Which areas do you serve?","a":"We serve businesses across the Greater Seattle Area, including Seattle, Bellevue, Redmond, Kirkland, Renton, Issaquah, Bothell, Lynnwood, Everett and Tacoma. Remote consulting is also available."},{"q":"How does pricing work?","a":"Every engagement is custom-quoted. After a free consultation we scope the work around your site, equipment and goals, then confirm the quote in writing before work begins."},{"q":"Do you work with small offices as well as larger organizations?","a":"Yes. Typical projects range from 5–50-person office network and Wi-Fi deployments to multi-site and enterprise network engineering, including routing, switching, SD-WAN and cloud networking."},{"q":"Can you support Chinese-speaking businesses?","a":"Yes. We provide clear communication and documentation in both English and Mandarin."},{"q":"Which network technologies do you work with?","a":"We regularly work with Cisco, Juniper, Palo Alto, Fortinet, Aruba, Ubiquiti and Meraki equipment, and we are vendor-neutral when recommending new hardware."}]}}
+{
+ "categories": [
+  {
+   "id": "assess",
+   "name": "Assess",
+   "services": [
+    {
+     "cta": "Request a Free Consultation",
+     "desc": "Find out whether the bottleneck is your Internet line, Wi-Fi, switching, firewall, or aging equipment—before you buy replacements.",
+     "id": "network-assessment",
+     "includes": [
+      "Network health assessment",
+      "Internet and Wi-Fi performance review",
+      "Equipment and security review",
+      "Network diagram",
+      "Recommendations report",
+      "Wi-Fi 6/6E vs Wi-Fi 7 readiness review",
+      "Backup Internet and continuity review"
+     ],
+     "name": "Network Assessment",
+     "price": "Custom Quote"
+    },
+    {
+     "cta": "Request a Free Consultation",
+     "desc": "Expert guidance for office expansions, new offices, modernization, and infrastructure planning.",
+     "id": "consulting-planning",
+     "includes": [
+      "Office expansion planning",
+      "New office planning",
+      "Network modernization",
+      "Infrastructure review",
+      "Vendor evaluation",
+      "Project planning",
+      "ISP and backup-Internet planning",
+      "Relocation timeline and readiness checklist"
+     ],
+     "name": "Consulting & Project Planning",
+     "price": "Custom Quote"
+    }
+   ],
+   "tagline": "Understand where your network stands — and where it should go."
+  },
+  {
+   "id": "build",
+   "name": "Build",
+   "services": [
+    {
+     "bestFor": "5–75 employees",
+     "cta": "Request a Free Consultation",
+     "desc": "Complete network installation for new or expanding offices, planned around how your team actually works.",
+     "id": "office-network-setup",
+     "includes": [
+      "Firewall and router setup",
+      "Managed switches",
+      "Business Wi-Fi",
+      "Guest Wi-Fi",
+      "VLAN configuration",
+      "Network documentation",
+      "Backup Internet / failover option",
+      "Meeting-room wired connections",
+      "UPS and rack planning"
+     ],
+     "name": "Office Network Setup",
+     "price": "Custom Quote"
+    },
+    {
+     "cta": "Request a Free Consultation",
+     "desc": "Fast, reliable wireless designed around your space—plus an honest answer on whether Wi-Fi 6/6E is enough or Wi-Fi 7 is worth it.",
+     "id": "business-wifi",
+     "includes": [
+      "Wi-Fi site survey",
+      "Coverage analysis",
+      "Access point placement",
+      "Performance optimization",
+      "New Wi-Fi deployment",
+      "Post-install coverage and performance validation",
+      "Roaming tuning between access points",
+      "Guest, POS and IoT Wi-Fi separation",
+      "WPA3 and firmware review",
+      "Switch, PoE and cabling readiness for new APs"
+     ],
+     "name": "Business Wi-Fi & Wi-Fi Refresh",
+     "price": "Custom Quote"
+    },
+    {
+     "cta": "Request a Free Consultation",
+     "desc": "Professional cabling infrastructure, installed right the first time.",
+     "id": "structured-cabling",
+     "includes": [
+      "Cat6, Cat6A, and fiber",
+      "Patch panels",
+      "Network racks",
+      "Cable management",
+      "Labeling",
+      "Testing",
+      "Documentation"
+     ],
+     "name": "Structured Cabling",
+     "price": "Custom Quote"
+    },
+    {
+     "cta": "Request a Free Consultation",
+     "desc": "Move your network with a plan that reduces disruption during move week.",
+     "id": "office-relocation",
+     "includes": [
+      "Network planning",
+      "ISP coordination",
+      "Equipment relocation",
+      "Installation and testing",
+      "Post-move support",
+      "ISP ordering timeline — start early",
+      "Floor-plan network drop count",
+      "Rack, power and UPS readiness",
+      "Pre-move and move-day testing"
+     ],
+     "name": "Office Relocation",
+     "price": "Custom Quote"
+    }
+   ],
+   "tagline": "New office, expansion, or relocation — built on a solid foundation."
+  },
+  {
+   "id": "manage",
+   "name": "Manage",
+   "services": [
+    {
+     "cta": "Request a Free Consultation",
+     "desc": "Fast, expert diagnosis when something isn't working.",
+     "id": "network-troubleshooting",
+     "includes": [
+      "Slow Internet",
+      "Wi-Fi problems",
+      "VPN connectivity",
+      "Firewall issues",
+      "Network outages",
+      "Routing problems",
+      "Performance bottlenecks"
+     ],
+     "includesLabel": "Common issues we resolve",
+     "name": "Network Troubleshooting",
+     "price": "Custom Quote"
+    },
+    {
+     "cta": "Request a Free Consultation",
+     "desc": "See what's happening on your network — before problems find you.",
+     "id": "monitoring-setup",
+     "includes": [
+      "Device onboarding",
+      "Monitoring platform configuration",
+      "Alert configuration",
+      "Configuration backup",
+      "Device inventory",
+      "Network baseline",
+      "Dashboard setup"
+     ],
+     "name": "Network Monitoring Setup",
+     "price": "Custom Quote"
+    },
+    {
+     "id": "backup-internet-continuity",
+     "name": "Backup Internet & Network Continuity",
+     "price": "Custom Quote",
+     "cta": "Request a Free Consultation",
+     "desc": "Keep payments, phones and cloud apps working when the main Internet line fails.",
+     "bestFor": "Retail, restaurants and offices that cannot stop for an outage",
+     "includes": [
+      "Dual-ISP or 5G/LTE failover design",
+      "Automatic failover testing",
+      "UPS protection for modem, firewall, switches and access points",
+      "Priority rules for POS, phones and critical cloud apps",
+      "Separate POS, camera, guest and office networks",
+      "A simple outage runbook your team can follow"
+     ]
+    },
+    {
+     "cta": "View Network Care Plans",
+     "ctaHref": "/network-care/",
+     "desc": "Proactive monitoring and maintenance for small businesses.",
+     "id": "network-care-essential",
+     "link": true,
+     "name": "Network Care Essential",
+     "price": "Custom Quote"
+    },
+    {
+     "cta": "View Network Care Plans",
+     "ctaHref": "/network-care/",
+     "desc": "Proactive monitoring plus engineer support for growing businesses.",
+     "id": "network-care-professional",
+     "link": true,
+     "name": "Network Care Professional",
+     "price": "Custom Quote"
+    }
+   ],
+   "tagline": "Keep day-to-day operations running smoothly."
+  },
+  {
+   "id": "secure",
+   "name": "Secure & Advanced",
+   "services": [
+    {
+     "id": "network-security-checkup",
+     "name": "Network Security Checkup",
+     "price": "Custom Quote",
+     "cta": "Request a Free Consultation",
+     "desc": "A practical review of your firewall, VPN, remote access and network separation—with a prioritized fix list.",
+     "includesLabel": "What we check",
+     "includes": [
+      "Firewall age, support status, firmware and policy review",
+      "Default or weak admin credentials",
+      "MFA for VPN, firewall admin and remote access",
+      "Guest, POS, camera and IoT network separation",
+      "Vendor and former-employee remote-access review",
+      "Configuration backup and network diagram check"
+     ]
+    },
+    {
+     "cta": "Request a Free Consultation",
+     "desc": "Protect your business with properly designed network security.",
+     "id": "network-security",
+     "includes": [
+      "Firewall deployment",
+      "Firewall policy review",
+      "VPN configuration",
+      "Network segmentation",
+      "Guest network isolation",
+      "Secure remote access",
+      "Security assessment",
+      "Secure remote-access design or VPN replacement options",
+      "Cyber-insurance network documentation support"
+     ],
+     "name": "Network Security",
+     "price": "Custom Quote"
+    },
+    {
+     "cta": "Request a Free Consultation",
+     "desc": "Advanced networking services for complex environments.",
+     "id": "enterprise-network-engineering",
+     "includes": [
+      "Network architecture",
+      "Routing & switching",
+      "BGP",
+      "OSPF",
+      "Multi-ISP",
+      "SD-WAN",
+      "High availability",
+      "VPN design",
+      "Cloud networking",
+      "Azure networking",
+      "AWS networking",
+      "Network automation"
+     ],
+     "includesLabel": "Services",
+     "name": "Enterprise Network Engineering",
+     "price": "Custom Quote",
+     "technologies": [
+      "Cisco",
+      "Juniper",
+      "Palo Alto",
+      "Fortinet",
+      "Aruba",
+      "Ubiquiti",
+      "Meraki"
+     ],
+     "technologiesLabel": "Technologies we work with"
+    }
+   ],
+   "tagline": "Serious protection and serious engineering for demanding environments."
+  }
+ ],
+ "heading": "Network Services for Growing Businesses",
+ "intro": "Start with the problem: slow Wi-Fi, a new office or move, an aging firewall, no backup Internet, or no one watching the network. We scope the fix around your site, team and budget—every engagement is custom-quoted after a free consultation.",
+ "seo": {
+  "title": "Seattle Network Services: Wi-Fi, Office Setup, Security & Backup Internet | Reliable IT Consulting",
+  "description": "Problem-led network services in Greater Seattle: slow Wi-Fi fixes, office setup and moves, firewall/VPN security checkups, backup Internet, cabling, monitoring and Network Care. Custom quotes."
+ },
+ "faq": {
+  "heading": "Network Services FAQs",
+  "items": [
+   {
+    "q": "Which areas do you serve?",
+    "a": "We serve businesses across the Greater Seattle Area, including Seattle, Bellevue, Redmond, Kirkland, Renton, Issaquah, Bothell, Lynnwood, Everett and Tacoma. Remote consulting is also available."
+   },
+   {
+    "q": "How does pricing work?",
+    "a": "Every engagement is custom-quoted. After a free consultation we scope the work around your site, equipment and goals, then confirm the quote in writing before work begins."
+   },
+   {
+    "q": "Do you work with small offices as well as larger organizations?",
+    "a": "Yes. Typical projects range from 5–50-person office network and Wi-Fi deployments to multi-site and enterprise network engineering, including routing, switching, SD-WAN and cloud networking."
+   },
+   {
+    "q": "Can you support Chinese-speaking businesses?",
+    "a": "Yes. We provide clear communication and documentation in both English and Mandarin."
+   },
+   {
+    "q": "Which network technologies do you work with?",
+    "a": "We regularly work with Cisco, Juniper, Palo Alto, Fortinet, Aruba, Ubiquiti and Meraki equipment, and we are vendor-neutral when recommending new hardware."
+   },
+   {
+    "q": "Why is our office Wi-Fi slow even though we pay for fast Internet?",
+    "a": "Internet speed is only one link in the chain. Slow Wi-Fi is often caused by access-point placement, channel interference, roaming problems, overloaded APs, weak switching/PoE, or cabling. We test wired vs wireless first so you do not buy the wrong fix."
+   },
+   {
+    "q": "Do we need Wi-Fi 7, or is Wi-Fi 6/6E enough?",
+    "a": "For many offices, Wi-Fi 6/6E is still enough. Wi-Fi 7 helps most in dense, high-capacity environments—and only when client devices, switches, PoE, cabling and uplinks can support it. We recommend based on your devices and bottlenecks, not the newest label."
+   },
+   {
+    "q": "What happens to our business if the Internet goes down?",
+    "a": "Without a continuity plan, POS, cloud apps, phones and cameras can all stop together. A backup-Internet design adds a second ISP or 5G/LTE failover, UPS protection for core network gear, priority rules for critical traffic, and a tested outage runbook."
+   },
+   {
+    "q": "How do we separate guest Wi-Fi, POS, cameras and office computers?",
+    "a": "They should not share one flat network. We design separate network segments (such as VLANs) with firewall rules so guests can reach the Internet without reaching office computers, POS systems, cameras or printers."
+   },
+   {
+    "q": "Our VPN is slow or keeps disconnecting. What are the options?",
+    "a": "The fix depends on the bottleneck: firewall throughput, Internet upload speed, VPN settings, split tunneling, or the remote-access design itself. We review the current VPN first, then recommend repair, replacement, or an identity-based remote-access option if it fits."
+   },
+   {
+    "q": "What should be ready before our office move?",
+    "a": "Start the ISP order early, count network drops from the floor plan, confirm rack location/power/UPS, run and test cabling before furniture blocks access, and test Internet, Wi-Fi, VPN, phones and printers before staff move in."
+   }
+  ]
+ },
+ "guides": {
+  "heading": "Network Know-How: Problems, Explained Plainly",
+  "intro": "You do not need to become a network engineer. These are the distinctions we use when diagnosing a business network—and what we check before recommending new equipment.",
+  "checkLabel": "What we check",
+  "items": [
+   {
+    "title": "Slow Internet is not the same as slow Wi-Fi",
+    "body": "If a wired computer is fast but wireless devices drop or crawl, the Internet line may be fine. The problem could be access-point placement, channel interference, roaming, the switch or PoE budget, or the cabling behind the AP.",
+    "check": "Wired vs wireless speed tests, coverage map, AP/switch health, channel and roaming behavior."
+   },
+   {
+    "title": "More access points can make Wi-Fi worse",
+    "body": "Too many APs turned up too loudly can cause devices to cling to a distant AP or roam at the wrong time. Good Wi-Fi is a design—coverage, capacity, channels and transmit power working together—not just more hardware.",
+    "check": "Site survey, channel plan, AP placement, transmit power, and post-install validation with real devices."
+   },
+   {
+    "title": "Wi-Fi 7 is a system decision, not a sticker",
+    "body": "New APs only help if the rest of the system keeps up: client devices, switch ports, PoE budget, cabling and Internet uplink. Many offices get more value from fixing design and backhaul than from jumping to the newest standard.",
+    "check": "Device mix, AP generation, 2.5G/PoE switch readiness, cabling condition, and where the real bottleneck is."
+   },
+   {
+    "title": "Guest Wi-Fi should never touch POS or office computers",
+    "body": "A single flat network means a guest phone, a camera, a POS terminal and your file shares all live in the same neighborhood. Segmentation keeps the convenience of guest Wi-Fi without giving it a path into business systems.",
+    "check": "VLAN/segmentation design, firewall rules between segments, and who can administer each network."
+   },
+   {
+    "title": "A slow VPN is not always an Internet problem",
+    "body": "VPN performance can be limited by the firewall, upload bandwidth, tunneling settings, or forcing all traffic through the office. In other cases the better fix is a different remote-access design with MFA and per-user access.",
+    "check": "Firewall throughput and firmware, VPN configuration, MFA, user/vendor access list, and split-tunnel policy."
+   },
+   {
+    "title": "A backup line only counts if it has been tested",
+    "body": "A second Internet connection sitting in a box does not help if failover was never tested, the firewall has no power during an outage, or staff do not know what to do. Continuity means the failover, the UPS and the runbook all work together.",
+    "check": "Failover test, UPS coverage for core gear, priority traffic rules, and a one-page outage runbook."
+   }
+  ]
+ }
+}

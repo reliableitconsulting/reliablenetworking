@@ -343,3 +343,13 @@ a { color: var(--blue); }
 .faq-item { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1.1rem 1.25rem; }
 .faq-item h3 { margin: 0 0 0.45rem; font-size: 1.05rem; }
 .faq-item p { margin: 0; }
+
+/* Network Know-How guides */
+.guide-grid { display: grid; gap: 1.25rem; margin-top: 2.5rem; text-align: left; }
+.guide-card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem; border-top: 3px solid var(--cta); }
+.guide-card h3 { font-size: 1.08rem; margin-bottom: 0.45rem; }
+.guide-card p { color: var(--muted); margin: 0 0 0.8rem; font-size: 0.97rem; }
+.guide-card .guide-check { color: var(--ink); margin: 0; }
+.guide-card .guide-check strong { color: var(--blue-dark); }
+@media (min-width: 720px) { .guide-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .guide-grid { grid-template-columns: repeat(3, 1fr); } }

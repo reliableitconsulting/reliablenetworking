@@ -1,1 +1,94 @@
-{"careTeaser":{"cta":"View Network Care Plans","ctaHref":"/network-care/","heading":"Keep Your Network Healthy","text":"Proactive network monitoring and maintenance for businesses that depend on reliable connectivity."},"help":{"cta":"View All Services","ctaHref":"/services/","heading":"How Can We Help?","items":[{"href":"/services/#business-wifi","text":"Reliable wireless coverage and better performance for your business.","title":"Improve Wi-Fi Performance"},{"href":"/services/#office-network-setup","text":"Complete network design and deployment for new and expanding offices.","title":"Build Office Networks"},{"href":"/services/#network-assessment","text":"Modernize aging equipment and improve network performance.","title":"Upgrade Network Infrastructure"},{"href":"/services/#structured-cabling","text":"Professional Cat6, Cat6A, and fiber infrastructure.","title":"Install Structured Cabling"},{"href":"/services/#network-security","text":"Firewalls, VPNs, segmentation, and secure remote access.","title":"Protect Your Business Network"},{"href":"/network-care/","text":"Proactive monitoring and ongoing network support.","title":"Monitor & Maintain"}]},"hero":{"credibility":"Enterprise-Level Expertise • English & Mandarin Support","eyebrow":"Greater Seattle Area • Remote Consulting Available","headline":"Enterprise Networking for Growing Businesses","image":"/assets/img/hero-network.jpg","imageAlt":"Enterprise network infrastructure with connected server racks and network topology","primaryCta":"Request a Free Consultation","primaryCtaHref":"/contact/","secondaryCta":"Explore Our Services","secondaryCtaHref":"/services/","sub":"Reliable, secure, and scalable network solutions — from business Wi-Fi and office networks to advanced enterprise network engineering."},"industries":{"heading":"Networking for Every Business","image":"/assets/img/industries.jpg","imageAlt":"Six industries served: professional office, medical, retail and restaurant, warehouse, education, and multi-location business","linkHref":"/industries/","linkLabel":"Explore Industries","text":"From professional offices and medical practices to restaurants, warehouses, schools, and multi-location businesses, we design networks around the way your organization operates."},"seo":{"title":"Seattle Network Consulting for Businesses | Reliable IT Consulting","description":"Network consulting in the Greater Seattle Area: office network setup, business Wi-Fi, structured cabling, security & 24/7 monitoring. English & Mandarin support."},"why":{"heading":"Enterprise Expertise. Local Service.","items":[{"text":"Advanced networking knowledge for businesses of all sizes.","title":"Enterprise Networking Expertise"},{"text":"From routing and switching to BGP, SD-WAN, and cloud networking — real engineering depth when your project needs it.","title":"Advanced Engineering Capability"},{"text":"Local support for businesses throughout the Greater Seattle area.","title":"Local Seattle Team"},{"text":"Clear communication in both English and Mandarin.","title":"English & Mandarin Support"},{"text":"Solutions designed around your business — not unnecessary technology.","title":"Practical, Scalable Solutions"}]}}
+{
+ "careTeaser": {
+  "cta": "View Network Care Plans",
+  "ctaHref": "/network-care/",
+  "heading": "Keep Your Network Healthy",
+  "text": "24/7 automated monitoring for Internet, firewall, switches, Wi-Fi and VPN, with configuration backups and monthly health reports. Engineer review is included on higher plans."
+ },
+ "help": {
+  "cta": "View All Services",
+  "ctaHref": "/services/",
+  "heading": "What Problem Are You Trying to Solve?",
+  "items": [
+   {
+    "href": "/services/#business-wifi",
+    "title": "Wi-Fi Slow or Dropping?",
+    "text": "Dead zones, frozen video calls, or devices that cling to the wrong access point—we find whether it is coverage, capacity, interference, switching, or the Internet line."
+   },
+   {
+    "href": "/services/#office-relocation",
+    "title": "Setting Up or Moving an Office",
+    "text": "ISP timing, cabling, rack and UPS readiness, Wi-Fi, VPN, and move-day testing planned before your team arrives."
+   },
+   {
+    "href": "/services/#network-security-checkup",
+    "title": "VPN or Remote Access Unreliable",
+    "text": "Slow VPN, dropped connections, or shared logins—we review the firewall, access rules, MFA, and safer remote-access options."
+   },
+   {
+    "href": "/services/#network-security-checkup",
+    "title": "Worried About Firewall & Guest Wi-Fi?",
+    "text": "Guest, POS, camera, and office devices should not all share one flat network. We check segmentation and who can still get in remotely."
+   },
+   {
+    "href": "/services/#backup-internet-continuity",
+    "title": "Need Backup Internet?",
+    "text": "If the main line fails, can you still take payments and use cloud apps? We design dual-ISP or 5G/LTE failover—and test it."
+   },
+   {
+    "href": "/network-care/",
+    "title": "Want Someone Watching the Network",
+    "text": "24/7 automated monitoring, configuration backups, firmware alerts, and monthly health reporting—without hiring an in-house network engineer."
+   }
+  ]
+ },
+ "hero": {
+  "credibility": "Network specialists • Enterprise engineering depth • English & Mandarin support",
+  "eyebrow": "Greater Seattle Area • Remote Consulting Available",
+  "headline": "Business Networks That Stay Fast, Secure and Manageable",
+  "image": "/assets/img/hero-network.jpg",
+  "imageAlt": "Enterprise network infrastructure with connected server racks and network topology",
+  "primaryCta": "Request a Free Consultation",
+  "primaryCtaHref": "/contact/",
+  "secondaryCta": "Explore Our Services",
+  "secondaryCtaHref": "/services/",
+  "sub": "Office Wi-Fi, new-office network setup, firewall and VPN security, structured cabling, backup Internet, and ongoing monitoring for growing businesses across Greater Seattle. English and Mandarin support."
+ },
+ "industries": {
+  "heading": "Networking for Every Business",
+  "image": "/assets/img/industries.jpg",
+  "imageAlt": "Six industries served: professional office, medical, retail and restaurant, warehouse, education, and multi-location business",
+  "linkHref": "/industries/",
+  "linkLabel": "Explore Industries",
+  "text": "From professional offices and medical practices to restaurants, warehouses, schools, and multi-location businesses, we design networks around the way your organization operates."
+ },
+ "seo": {
+  "title": "Seattle Network Consulting for Businesses | Reliable IT Consulting",
+  "description": "Greater Seattle network consulting for growing businesses: office Wi-Fi, new-office setup, firewall/VPN security, backup Internet, cabling and 24/7 automated monitoring. English & Mandarin support."
+ },
+ "why": {
+  "heading": "Enterprise Expertise. Local Service.",
+  "items": [
+   {
+    "text": "Advanced networking knowledge for businesses of all sizes.",
+    "title": "Enterprise Networking Expertise"
+   },
+   {
+    "text": "From routing and switching to BGP, SD-WAN, and cloud networking — real engineering depth when your project needs it.",
+    "title": "Advanced Engineering Capability"
+   },
+   {
+    "text": "Local support for businesses throughout the Greater Seattle area.",
+    "title": "Local Seattle Team"
+   },
+   {
+    "text": "Clear communication in both English and Mandarin.",
+    "title": "English & Mandarin Support"
+   },
+   {
+    "text": "Solutions designed around your business — not unnecessary technology.",
+    "title": "Practical, Scalable Solutions"
+   }
+  ]
+ }
+}

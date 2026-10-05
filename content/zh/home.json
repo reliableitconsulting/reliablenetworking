@@ -1,1 +1,94 @@
-{"careTeaser":{"cta":"查看网络运维方案","ctaHref":"/network-care/","heading":"让您的网络保持健康运行","text":"为依赖稳定连接的企业提供主动式网络监控与运维服务。"},"help":{"cta":"查看全部服务","ctaHref":"/services/","heading":"我们能为您做什么？","items":[{"href":"/services/#business-wifi","text":"为您的企业提供稳定覆盖、更快速度的无线网络。","title":"提升 Wi-Fi 性能"},{"href":"/services/#office-network-setup","text":"为新建和扩张中的办公室提供完整的网络设计与部署。","title":"搭建办公网络"},{"href":"/services/#network-assessment","text":"更新老旧设备，全面提升网络性能。","title":"升级网络基础设施"},{"href":"/services/#structured-cabling","text":"专业的六类、超六类及光纤布线工程。","title":"综合布线施工"},{"href":"/services/#network-security","text":"防火墙、VPN、网络隔离与安全的远程接入。","title":"保护企业网络安全"},{"href":"/network-care/","text":"主动式监控与持续的网络技术支持。","title":"监控与运维"}]},"hero":{"credibility":"企业级技术实力 • 中英文服务","eyebrow":"大西雅图地区 • 支持远程咨询","headline":"为成长型企业打造企业级网络","image":"/assets/img/hero-network.jpg","imageAlt":"企业网络基础设施：互联的服务器机柜与网络拓扑","primaryCta":"预约免费咨询","primaryCtaHref":"/contact/","secondaryCta":"查看服务","secondaryCtaHref":"/services/","sub":"可靠、安全、可扩展的网络解决方案——从企业 Wi-Fi 和办公网络，到高级企业网络工程。"},"industries":{"heading":"服务各行各业的网络方案","image":"/assets/img/industries.jpg","imageAlt":"服务的六大行业：专业办公室、医疗、零售餐饮、仓库、教育、多门店企业","linkHref":"/industries/","linkLabel":"查看行业方案","text":"从专业办公室、医疗诊所，到餐厅、仓库、学校和多门店企业，我们围绕您组织的实际运营方式设计网络。"},"seo":{"title":"西雅图企业网络咨询与办公网络搭建 | Reliable IT Consulting","description":"大西雅图企业网络咨询：办公网络搭建、企业 Wi-Fi、综合布线、防火墙安全与 24/7 监控运维，中英文服务，覆盖 Seattle、Bellevue、Redmond。"},"why":{"heading":"企业级技术，本地化服务。","items":[{"text":"为各种规模的企业提供先进的网络技术能力。","title":"企业级网络技术"},{"text":"从路由交换到 BGP、SD-WAN 和云网络——在您的项目需要时，提供真正的工程深度。","title":"深厚的工程实力"},{"text":"为大西雅图地区的企业提供本地化支持。","title":"本地西雅图团队"},{"text":"用中文或英文清晰沟通，无障碍交流。","title":"中英文服务"},{"text":"围绕您的业务量身设计方案，拒绝不必要的技术堆砌。","title":"实用且可扩展的方案"}]}}
+{
+ "careTeaser": {
+  "cta": "查看网络运维方案",
+  "ctaHref": "/network-care/",
+  "heading": "让您的网络保持健康运行",
+  "text": "7×24 自动监控互联网、防火墙、交换机、Wi-Fi 与 VPN，包含配置备份和月度健康报告；更高等级方案包含工程师复查。"
+ },
+ "help": {
+  "cta": "查看全部服务",
+  "ctaHref": "/services/",
+  "heading": "您现在想解决哪个问题？",
+  "items": [
+   {
+    "href": "/services/#business-wifi",
+    "title": "Wi-Fi 慢、老掉线？",
+    "text": "覆盖死角、视频会议卡顿、设备连着远处的 AP 不放手——我们先判断问题出在覆盖、容量、干扰、交换/供电，还是互联网线路本身。"
+   },
+   {
+    "href": "/services/#office-relocation",
+    "title": "正在筹备新办公室或搬办公室",
+    "text": "宽带开通时间、布线点位、机柜与 UPS、Wi-Fi、VPN 和搬家当天的测试，都在员工进场前规划好。"
+   },
+   {
+    "href": "/services/#network-security-checkup",
+    "title": "VPN 或远程办公不稳定",
+    "text": "VPN 慢、总断线、大家共用一个账号——我们检查防火墙、访问规则、MFA 和更安全的远程接入方式。"
+   },
+   {
+    "href": "/services/#network-security-checkup",
+    "title": "担心防火墙和访客 Wi-Fi 不安全",
+    "text": "访客、收银、摄像头和办公电脑不应该全挤在同一个网络里。我们检查网络隔离和谁还能远程进来。"
+   },
+   {
+    "href": "/services/#backup-internet-continuity",
+    "title": "需要备用网络？",
+    "text": "主线路断了还能不能收银、用云系统？我们设计双宽带或 5G/LTE 自动切换，并真正做切换测试。"
+   },
+   {
+    "href": "/network-care/",
+    "title": "想有人长期盯着网络",
+    "text": "7×24 自动监控、配置备份、固件提醒和月度健康报告，不必自己养一个网络工程师。"
+   }
+  ]
+ },
+ "hero": {
+  "credibility": "网络专项服务 • 企业级工程能力 • 中英文支持",
+  "eyebrow": "大西雅图地区 • 支持远程咨询",
+  "headline": "让企业网络跑得快、守得住、管得清",
+  "image": "/assets/img/hero-network.jpg",
+  "imageAlt": "企业网络基础设施：互联的服务器机柜与网络拓扑",
+  "primaryCta": "预约免费咨询",
+  "primaryCtaHref": "/contact/",
+  "secondaryCta": "查看服务",
+  "secondaryCtaHref": "/services/",
+  "sub": "为大西雅图地区的成长型企业提供办公室 Wi-Fi、新办公室组网、防火墙与 VPN 安全、综合布线、备用互联网和持续监控服务，中英文沟通。"
+ },
+ "industries": {
+  "heading": "服务各行各业的网络方案",
+  "image": "/assets/img/industries.jpg",
+  "imageAlt": "服务的六大行业：专业办公室、医疗、零售餐饮、仓库、教育、多门店企业",
+  "linkHref": "/industries/",
+  "linkLabel": "查看行业方案",
+  "text": "从专业办公室、医疗诊所，到餐厅、仓库、学校和多门店企业，我们围绕您组织的实际运营方式设计网络。"
+ },
+ "seo": {
+  "title": "西雅图企业网络咨询与办公网络搭建 | Reliable IT Consulting",
+  "description": "大西雅图企业网络咨询：办公室 Wi-Fi、新办公室组网、防火墙/VPN 安全、备用互联网、综合布线与 7×24 自动监控，中英文服务，覆盖 Seattle、Bellevue、Redmond。"
+ },
+ "why": {
+  "heading": "企业级技术，本地化服务。",
+  "items": [
+   {
+    "text": "为各种规模的企业提供先进的网络技术能力。",
+    "title": "企业级网络技术"
+   },
+   {
+    "text": "从路由交换到 BGP、SD-WAN 和云网络——在您的项目需要时，提供真正的工程深度。",
+    "title": "深厚的工程实力"
+   },
+   {
+    "text": "为大西雅图地区的企业提供本地化支持。",
+    "title": "本地西雅图团队"
+   },
+   {
+    "text": "用中文或英文清晰沟通，无障碍交流。",
+    "title": "中英文服务"
+   },
+   {
+    "text": "围绕您的业务量身设计方案，拒绝不必要的技术堆砌。",
+    "title": "实用且可扩展的方案"
+   }
+  ]
+ }
+}

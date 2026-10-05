@@ -1,1 +1,89 @@
-{"cta":"Request a Free Consultation","ctaHref":"/contact/","heading":"Industries We Serve","industries":[{"desc":"Accounting, law, consulting, financial, and other professional services.","id":"professional-offices","name":"Professional Offices","needs":["Reliable Wi-Fi","Secure remote access","VPN","Conference room connectivity","Network security"]},{"desc":"Networking for medical offices and dental practices.","id":"medical-dental","name":"Medical & Dental","needs":["Reliable connectivity","Secure networks","Equipment connectivity","Guest Wi-Fi","Business continuity"]},{"desc":"Stores, restaurants, and hospitality businesses that can't afford downtime.","id":"retail-restaurants","name":"Retail & Restaurants","needs":["POS connectivity","Business Wi-Fi","Guest Wi-Fi","Security cameras","Reliable Internet"]},{"desc":"Facilities where wireless has to work everywhere, all the time.","id":"warehouses","name":"Warehouses & Manufacturing","needs":["Warehouse Wi-Fi","Barcode scanners","Inventory systems","Security cameras","Office/warehouse connectivity"]},{"desc":"Mission-driven organizations that need dependable networks on a budget.","id":"education-nonprofits","name":"Education & Nonprofits","needs":["Staff Wi-Fi","Guest Wi-Fi","Secure networks","Classroom connectivity","Cost-conscious infrastructure"]},{"desc":"Consistent, centrally managed networking across every site.","id":"multi-location","name":"Multi-Location Businesses","needs":["Site-to-site VPN","SD-WAN","Centralized management","Standardized networking","Remote monitoring"]}],"intro":"Reliable networking for organizations with different environments, applications, and operational needs.","seo":{"title":"Network Solutions by Industry in Greater Seattle | Reliable IT Consulting","description":"Reliable networks for professional offices, medical practices, retail, restaurants, warehouses, schools & multi-site businesses across Greater Seattle."}}
+{
+ "cta": "Request a Free Consultation",
+ "ctaHref": "/contact/",
+ "heading": "Industries We Serve",
+ "industries": [
+  {
+   "desc": "Accounting, law, consulting, financial, and other professional services.",
+   "id": "professional-offices",
+   "name": "Professional Offices",
+   "needs": [
+    "Reliable Wi-Fi",
+    "Secure remote access",
+    "VPN",
+    "Conference room connectivity",
+    "Network security"
+   ]
+  },
+  {
+   "desc": "Networking for medical offices and dental practices.",
+   "id": "medical-dental",
+   "name": "Medical & Dental",
+   "needs": [
+    "Reliable connectivity",
+    "Secure networks",
+    "Equipment connectivity",
+    "Guest Wi-Fi",
+    "Business continuity"
+   ]
+  },
+  {
+   "desc": "Stores, restaurants, and hospitality businesses that cannot afford POS or guest Wi-Fi downtime.",
+   "id": "retail-restaurants",
+   "name": "Retail & Restaurants",
+   "needs": [
+    "POS connectivity",
+    "Business Wi-Fi",
+    "Guest Wi-Fi",
+    "Security cameras",
+    "Reliable Internet",
+    "Backup Internet and UPS for POS",
+    "Separate guest, POS and camera networks"
+   ]
+  },
+  {
+   "desc": "Facilities where scanners, printers and inventory systems have to stay connected down every aisle.",
+   "id": "warehouses",
+   "name": "Warehouses & Manufacturing",
+   "needs": [
+    "Warehouse Wi-Fi",
+    "Barcode scanners",
+    "Inventory systems",
+    "Security cameras",
+    "Office/warehouse connectivity",
+    "Barcode scanner roaming",
+    "Aisle-by-aisle Wi-Fi validation",
+    "Backup Internet for inventory systems"
+   ]
+  },
+  {
+   "desc": "Mission-driven organizations that need dependable networks on a budget.",
+   "id": "education-nonprofits",
+   "name": "Education & Nonprofits",
+   "needs": [
+    "Staff Wi-Fi",
+    "Guest Wi-Fi",
+    "Secure networks",
+    "Classroom connectivity",
+    "Cost-conscious infrastructure"
+   ]
+  },
+  {
+   "desc": "Consistent, centrally managed networking across every site.",
+   "id": "multi-location",
+   "name": "Multi-Location Businesses",
+   "needs": [
+    "Site-to-site VPN",
+    "SD-WAN",
+    "Centralized management",
+    "Standardized networking",
+    "Remote monitoring"
+   ]
+  }
+ ],
+ "intro": "Reliable networking for organizations with different environments, applications, and operational needs.",
+ "seo": {
+  "title": "Network Solutions by Industry in Greater Seattle | Reliable IT Consulting",
+  "description": "Reliable networks for professional offices, medical practices, retail, restaurants, warehouses, schools & multi-site businesses across Greater Seattle."
+ }
+}

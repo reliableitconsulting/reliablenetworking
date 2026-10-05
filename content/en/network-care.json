@@ -1,1 +1,101 @@
-{"closing":{"text":"Not sure which plan fits your business? Tell us about your network and we'll recommend the right level of care — no obligation.","title":"Not sure which plan fits?"},"heading":"Network Care","intro":"Proactive network monitoring and maintenance for businesses that depend on reliable connectivity.","plans":[{"audience":"For small businesses.","cta":"Request a Free Consultation","ctaHref":"/contact/","features":["1 office","Up to 15 monitored devices","24/7 automated monitoring","Internet availability monitoring","Firewall monitoring","Switch monitoring","Access point monitoring","VPN status monitoring","Configuration backup","Monthly health report","Firmware and security notifications"],"id":"essential","name":"Network Care Essential","note":"Engineering services billed separately.","price":"Custom Quote"},{"audience":"For growing businesses.","cta":"Request a Free Consultation","ctaHref":"/contact/","features":["10–75 employees","Up to 30 monitored devices","Everything in Essential","Monthly engineer review","Quarterly network health assessment","Firmware management","Up to 1 hour of network configuration changes per month","Priority business-hours response","Documentation maintenance","Configuration backup verification","Annual network planning consultation"],"id":"professional","name":"Network Care Professional","price":"Custom Quote"},{"audience":"For organizations requiring comprehensive network management and engineering support.","cta":"Contact Us","ctaHref":"/contact/","features":["Custom monitoring coverage and alerting","Multi-site and SD-WAN management","Dedicated engineering support","Security operations assistance","Ongoing architecture and planning guidance"],"id":"enterprise","name":"Managed Network Enterprise","price":"Custom Quote"}],"seo":{"title":"Managed Network Monitoring & Care Plans in Seattle | Reliable IT Consulting","description":"Proactive 24/7 network monitoring, firewall & Wi-Fi health checks, configuration backup and engineer review for Seattle businesses. Custom-quoted plans."},"faq":{"heading":"Network Care FAQs","items":[{"q":"What does Network Care monitor?","a":"Depending on your plan, monitoring can cover Internet availability, firewalls, switches, wireless access points and VPN status, with configuration backup and regular health reports."},{"q":"Is monitoring really 24/7?","a":"Yes. Automated monitoring runs 24/7 and alerts on availability and health issues. Engineer review and configuration-change allowances depend on the plan you choose."},{"q":"Are engineering services included?","a":"Essential focuses on monitoring and reporting, with engineering billed separately. Professional adds a monthly engineer review and up to 1 hour of network configuration changes per month. Enterprise is scoped individually."},{"q":"How are Network Care plans priced?","a":"All plans are custom-quoted based on sites, monitored devices and support level. Tell us about your network and we will recommend the right level of care — no obligation."}]}}
+{
+ "closing": {
+  "text": "Not sure which plan fits your business? Tell us about your network and we'll recommend the right level of care — no obligation.",
+  "title": "Not sure which plan fits?"
+ },
+ "heading": "Network Care",
+ "intro": "Proactive monitoring and maintenance for the network layer—Internet, firewall, switches, Wi-Fi and VPN. Automated monitoring runs 24/7; engineer review and configuration changes depend on the plan you choose.",
+ "plans": [
+  {
+   "audience": "For small businesses.",
+   "cta": "Request a Free Consultation",
+   "ctaHref": "/contact/",
+   "features": [
+    "1 office",
+    "Up to 15 monitored devices",
+    "24/7 automated monitoring",
+    "Internet availability monitoring",
+    "Firewall monitoring",
+    "Switch monitoring",
+    "Access point monitoring",
+    "VPN status monitoring",
+    "Configuration backup",
+    "Monthly health report",
+    "Firmware and security notifications"
+   ],
+   "id": "essential",
+   "name": "Network Care Essential",
+   "note": "Engineering services billed separately.",
+   "price": "Custom Quote"
+  },
+  {
+   "audience": "For growing businesses.",
+   "cta": "Request a Free Consultation",
+   "ctaHref": "/contact/",
+   "features": [
+    "10–75 employees",
+    "Up to 30 monitored devices",
+    "Everything in Essential",
+    "Monthly engineer review",
+    "Quarterly network health assessment",
+    "Firmware management",
+    "Up to 1 hour of network configuration changes per month",
+    "Priority business-hours response",
+    "Documentation maintenance",
+    "Configuration backup verification",
+    "Annual network planning consultation"
+   ],
+   "id": "professional",
+   "name": "Network Care Professional",
+   "price": "Custom Quote"
+  },
+  {
+   "audience": "For organizations requiring comprehensive network management and engineering support.",
+   "cta": "Contact Us",
+   "ctaHref": "/contact/",
+   "features": [
+    "Custom monitoring coverage and alerting",
+    "Multi-site and SD-WAN management",
+    "Dedicated engineering support",
+    "Security operations assistance",
+    "Ongoing architecture and planning guidance"
+   ],
+   "id": "enterprise",
+   "name": "Managed Network Enterprise",
+   "price": "Custom Quote"
+  }
+ ],
+ "seo": {
+  "title": "Managed Network Monitoring & Care Plans in Seattle | Reliable IT Consulting",
+  "description": "Proactive 24/7 network monitoring, firewall & Wi-Fi health checks, configuration backup and engineer review for Seattle businesses. Custom-quoted plans."
+ },
+ "faq": {
+  "heading": "Network Care FAQs",
+  "items": [
+   {
+    "q": "What does Network Care monitor?",
+    "a": "Depending on your plan, monitoring can cover Internet availability, firewalls, switches, wireless access points and VPN status, with configuration backup and regular health reports."
+   },
+   {
+    "q": "Is monitoring really 24/7?",
+    "a": "Yes. Automated monitoring runs 24/7 and alerts on availability and health issues. Engineer review and configuration-change allowances depend on the plan you choose."
+   },
+   {
+    "q": "Are engineering services included?",
+    "a": "Essential focuses on monitoring and reporting, with engineering billed separately. Professional adds a monthly engineer review and up to 1 hour of network configuration changes per month. Enterprise is scoped individually."
+   },
+   {
+    "q": "How are Network Care plans priced?",
+    "a": "All plans are custom-quoted based on sites, monitored devices and support level. Tell us about your network and we will recommend the right level of care — no obligation."
+   },
+   {
+    "q": "What happens after an alert?",
+    "a": "Automated monitoring flags availability and health issues. Engineer review, configuration changes and response priority then follow the plan you choose—Essential focuses on monitoring and reporting, while Professional adds monthly engineer review and a configuration-change allowance."
+   },
+   {
+    "q": "What will we actually receive?",
+    "a": "Depending on the plan: monitored Internet/firewall/switch/AP/VPN status, configuration backups, firmware and security notifications, a monthly health report, and engineer review or quarterly health assessment on higher plans."
+   }
+  ]
+ }
+}
