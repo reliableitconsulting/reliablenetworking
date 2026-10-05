@@ -118,6 +118,7 @@ export async function onRequestPost(context) {
   const missing = [];
   if (!name) missing.push('name');
   if (!validEmail(email)) missing.push('email');
+  if (!phone || phone.replace(/\D/g, '').length < 7) missing.push('phone');
   if (!service) missing.push('service');
   if (!description) missing.push('description');
   if (missing.length) {

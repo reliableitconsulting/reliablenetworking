@@ -445,7 +445,7 @@ function renderContact({ locale, site, c }) {
     </div>
     <div class="field-row">
       ${field('email', f.email, 'email', f.emailPh, true, ' autocomplete="email"')}
-      ${field('phone', f.phone, 'tel', f.phonePh, false, ' autocomplete="tel"')}
+      ${field('phone', f.phone, 'tel', f.phonePh, true, ' autocomplete="tel"')}
     </div>
     <div class="field-row">
       ${field('location', f.location, 'text', f.locationPh, false)}
