@@ -27,10 +27,10 @@ const load = (locale, name) =>
   JSON.parse(readFileSync(join(root, 'content', locale, `${name}.json`), 'utf8'));
 
 // ---------------------------------------------------------------- head
-function head({ locale, site, seo, pageId, path }) {
+function head({ locale, site, seo, pageId, path, altPath: altPathOverride }) {
   const url = config.baseUrl.replace(/\/$/, '') + path;
   const altLocale = locale === 'en' ? 'zh' : 'en';
-  const altPath = pagePath(altLocale, pageId);
+  const altPath = altPathOverride || pagePath(altLocale, pageId);
   const altUrl = config.baseUrl.replace(/\/$/, '') + altPath;
   const ogImage = config.baseUrl.replace(/\/$/, '') + '/assets/img/hero-network.jpg';
 
@@ -76,7 +76,7 @@ function head({ locale, site, seo, pageId, path }) {
 <link rel="alternate" hreflang="en" href="${esc(locale === 'en' ? url : altUrl)}">
 <link rel="alternate" hreflang="zh-CN" href="${esc(locale === 'zh' ? url : altUrl)}">
 <link rel="alternate" hreflang="x-default" href="${esc(locale === 'en' ? url : altUrl)}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="${esc(seo.ogType || 'website')}">
 <meta property="og:site_name" content="${esc(config.siteName)}">
 <meta property="og:title" content="${esc(seo.title)}">
 <meta property="og:description" content="${esc(seo.description)}">
@@ -85,7 +85,7 @@ function head({ locale, site, seo, pageId, path }) {
 <meta property="og:image:width" content="1600">
 <meta property="og:image:height" content="900">
 <meta property="og:image:alt" content="${esc(config.siteName)} — ${esc(config.tagline)}">
-<meta property="og:locale" content="${esc(site.ogLocale)}">
+<meta property="og:locale" content="${esc(site.ogLocale)}">${seo.published ? `\n<meta property="article:published_time" content="${esc(seo.published)}">` : ''}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(seo.title)}">
 <meta name="twitter:description" content="${esc(seo.description)}">
@@ -103,7 +103,7 @@ function head({ locale, site, seo, pageId, path }) {
 const logoSvg = `<svg class="brand-mark" viewBox="0 0 40 40" width="34" height="34" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#0a1c33"/><g stroke="#5ea0ff" stroke-width="2" fill="none"><path d="M20 9v22M9 20h22"/></g><g fill="#ffffff"><circle cx="20" cy="9" r="3.2"/><circle cx="20" cy="31" r="3.2"/><circle cx="9" cy="20" r="3.2"/><circle cx="31" cy="20" r="3.2"/></g><circle cx="20" cy="20" r="4" fill="#f59e0b"/></svg>`;
 
 // ---------------------------------------------------------------- header / footer
-function header({ locale, site, pageId }) {
+function header({ locale, site, pageId, altPath }) {
   const navItems = site.nav
     .map((n) => {
       const active = n.id === pageId ? ' aria-current="page"' : '';
@@ -132,7 +132,7 @@ function header({ locale, site, pageId }) {
           <div class="lang-switch" role="group" aria-label="${esc(site.langLabel)}">
             <span class="lang-cur" aria-current="true">${esc(curLabel)}</span>
             <span class="lang-sep" aria-hidden="true">|</span>
-            <a class="lang-other" href="${esc(pagePath(other, pageId))}" hreflang="${other === 'zh' ? 'zh-CN' : 'en'}">${esc(otherLabel)}</a>
+            <a class="lang-other" href="${esc(altPath || pagePath(other, pageId))}" hreflang="${other === 'zh' ? 'zh-CN' : 'en'}">${esc(otherLabel)}</a>
           </div>
           <a class="btn btn-cta btn-sm" href="${esc(L(locale, site.headerCtaHref))}">${esc(site.headerCta)}</a>
         </div>
@@ -514,12 +514,90 @@ function renderLegal({ doc }) {
 <section class="section"><div class="container narrow">${secs}</div></section>`;
 }
 
+// ---------------------------------------------------------------- resources (guides)
+const resourcesPath = (locale, slug) =>
+  (locale === 'zh' ? '/zh' : '') + '/resources/' + (slug ? `${slug}/` : '');
+
+function formatDate(locale, iso) {
+  const [y, m, d] = String(iso).split('-').map(Number);
+  if (locale === 'zh') return `${y}年${m}月${d}日`;
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return `${months[m - 1]} ${d}, ${y}`;
+}
+
+function readMinutes(article, locale) {
+  const text = article.blocks
+    .map((b) => (b.p ? b.p : '') + (b.h ? b.h : '') + (b.ul ? b.ul.join(' ') : ''))
+    .join(' ');
+  const units = locale === 'zh' ? text.length / 350 : text.split(/\s+/).filter(Boolean).length / 200;
+  return Math.max(1, Math.ceil(units));
+}
+
+function resourceCard(locale, labels, a) {
+  const meta = `${labels.categories[a.category] || ''} · ${formatDate(locale, a.date)} · ${readMinutes(a, locale)} ${esc(labels.minRead)}`;
+  return `<a class="guide-card resource-card reveal" href="${esc(resourcesPath(locale, a.slug))}">
+      <p class="card-meta">${esc(meta)}</p>
+      <h3>${esc(a.title)}</h3>
+      <p>${esc(a.summary)}</p>
+      <span class="card-link" aria-hidden="true">→</span>
+    </a>`;
+}
+
+function renderResources({ locale, site, c }) {
+  const r = c.resources;
+  const articles = [...r.articles].sort((x, y) => (x.date < y.date ? 1 : -1));
+  const cards = articles.map((a) => resourceCard(locale, r.labels, a)).join('\n');
+  return `${pageHero(r.heading, r.intro)}
+<section class="section"><div class="container">
+  <div class="guide-grid">${cards}</div>
+</div></section>`;
+}
+
+function renderArticleMain({ locale, site, c, article }) {
+  const r = c.resources;
+  const meta = `${r.labels.categories[article.category] || ''} · ${formatDate(locale, article.date)} · ${readMinutes(article, locale)} ${esc(r.labels.minRead)}`;
+  const blocks = article.blocks
+    .map((b) => {
+      if (b.h) return `<h2>${esc(b.h)}</h2>`;
+      if (b.ul) return `<ul class="article-list">${b.ul.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`;
+      return `<p>${esc(b.p || '')}</p>`;
+    })
+    .join('\n');
+  return `${pageHero(article.title, null)}
+<section class="section"><div class="container narrow article-body">
+  <p><a class="back-link" href="${esc(resourcesPath(locale))}">${esc(r.labels.backToList)}</a></p>
+  <p class="article-meta">${esc(meta)}</p>
+  ${blocks}
+</div></section>`;
+}
+
+function renderArticlePage(locale, article) {
+  const names = ['site', 'resources'];
+  const c = Object.fromEntries(names.map((n) => [n, load(locale, n)]));
+  const site = c.site;
+  const path = resourcesPath(locale, article.slug);
+  const altPath = resourcesPath(locale === 'en' ? 'zh' : 'en', article.slug);
+  const seo = {
+    title: `${article.title} | ${config.siteName}`,
+    description: article.summary,
+    ogType: 'article',
+    published: article.date,
+  };
+  const main = renderArticleMain({ locale, site, c, article });
+  const extraLd = breadcrumbSchema(locale, site, 'resources', path, article.title);
+  return (
+    head({ locale, site, seo, pageId: 'resources', path, altPath }) +
+    `\n<body>\n${header({ locale, site, pageId: 'resources', altPath })}\n<main id="main">\n${main}\n</main>\n${ctaBand({ locale, site })}\n${footer({ locale, site })}\n${extraLd}\n</body>\n</html>\n`
+  );
+}
+
 // ---------------------------------------------------------------- assembly + build
 const PAGES = [
   { id: 'home', render: renderHome },
   { id: 'services', render: renderServices },
   { id: 'industries', render: renderIndustries },
   { id: 'network-care', render: renderNetworkCare },
+  { id: 'resources', render: renderResources },
   { id: 'about', render: renderAbout },
   { id: 'contact', render: renderContact },
   { id: 'privacy', render: renderLegal, sub: 'privacy' },
@@ -567,7 +645,7 @@ function faqSchema(faq) {
 }
 
 function renderPage(locale, page) {
-  const names = ['site', 'home', 'services', 'industries', 'network-care', 'about', 'contact', 'legal'];
+  const names = ['site', 'home', 'services', 'industries', 'network-care', 'resources', 'about', 'contact', 'legal'];
   const c = Object.fromEntries(names.map((n) => [n, load(locale, n)]));
   const site = c.site;
   const doc = page.sub ? c.legal[page.sub] : null;
@@ -631,6 +709,29 @@ for (const locale of config.locales) {
   }
 }
 
+// resource article pages (one pair of locales per slug)
+const articleSitemapEntries = [];
+for (const locale of config.locales) {
+  const rc = load(locale, 'resources');
+  const base = config.baseUrl.replace(/\/$/, '');
+  for (const article of rc.articles) {
+    const path = resourcesPath(locale, article.slug);
+    const html = renderArticlePage(locale, article);
+    const outDir = join(dist, path.replace(/^\//, ''));
+    mkdirSync(outDir, { recursive: true });
+    writeFileSync(join(outDir, 'index.html'), html);
+    console.log('wrote', path);
+    const enPath = resourcesPath('en', article.slug);
+    const zhPath = resourcesPath('zh', article.slug);
+    articleSitemapEntries.push(
+      `  <url><loc>${esc(base + path)}</loc><lastmod>${article.date}</lastmod><changefreq>yearly</changefreq><priority>0.6</priority>` +
+      `<xhtml:link rel="alternate" hreflang="en" href="${esc(base + enPath)}"/>` +
+      `<xhtml:link rel="alternate" hreflang="zh-CN" href="${esc(base + zhPath)}"/>` +
+      `<xhtml:link rel="alternate" hreflang="x-default" href="${esc(base + enPath)}"/></url>`
+    );
+  }
+}
+
 writeFileSync(join(dist, '404.html'), render404());
 
 // sitemap.xml (with hreflang alternates between EN and ZH versions)
@@ -638,6 +739,7 @@ const SITEMAP_META = {
   home: { priority: '1.0', freq: 'monthly' },
   services: { priority: '0.9', freq: 'monthly' },
   'network-care': { priority: '0.8', freq: 'monthly' },
+  resources: { priority: '0.7', freq: 'weekly' },
   contact: { priority: '0.8', freq: 'monthly' },
   industries: { priority: '0.7', freq: 'monthly' },
   about: { priority: '0.6', freq: 'monthly' },
@@ -661,7 +763,7 @@ for (const page of PAGES) {
 }
 const sitemap =
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n` +
-  sitemapEntries.join('\n') +
+  sitemapEntries.concat(articleSitemapEntries).join('\n') +
   `\n</urlset>\n`;
 writeFileSync(join(dist, 'sitemap.xml'), sitemap);
 
@@ -697,6 +799,10 @@ const llmsLines = [
   `- [Network Care](${baseUrlClean + pagePath('en', 'network-care')}): ${pageDesc('en', 'network-care')}`,
   `- [About](${baseUrlClean + pagePath('en', 'about')}): ${pageDesc('en', 'about')}`,
   `- [Contact](${baseUrlClean + pagePath('en', 'contact')}): ${pageDesc('en', 'contact')}`,
+  `- [Guides & Resources](${baseUrlClean + pagePath('en', 'resources')}): ${pageDesc('en', 'resources')}`,
+  '',
+  '## Guides & Resources',
+  ...load('en', 'resources').articles.map((a) => `- [${a.title}](${baseUrlClean}/resources/${a.slug}/): ${a.summary}`),
   '',
   '## 中文页面',
   `- [首页](${baseUrlClean + pagePath('zh', 'home')}): ${pageDesc('zh', 'home')}`,
@@ -705,6 +811,8 @@ const llmsLines = [
   `- [网络运维](${baseUrlClean + pagePath('zh', 'network-care')}): ${pageDesc('zh', 'network-care')}`,
   `- [关于我们](${baseUrlClean + pagePath('zh', 'about')}): ${pageDesc('zh', 'about')}`,
   `- [联系我们](${baseUrlClean + pagePath('zh', 'contact')}): ${pageDesc('zh', 'contact')}`,
+  `- [干货分享](${baseUrlClean + pagePath('zh', 'resources')}): ${pageDesc('zh', 'resources')}`,
+  ...load('zh', 'resources').articles.map((a) => `- [${a.title}](${baseUrlClean}/zh/resources/${a.slug}/): ${a.summary}`),
   '',
   '## Optional',
   `- [Privacy Policy](${baseUrlClean + pagePath('en', 'privacy')})`,
@@ -758,6 +866,19 @@ for (const loc of ['en', 'zh']) {
   full.push(`### ${contact.heading}`);
   full.push(contact.intro);
   if (contact.faq) { full.push(`### ${contact.faq.heading}`); for (const f of contact.faq.items) { full.push(`Q: ${f.q}`); full.push(`A: ${f.a}`); } }
+  full.push('');
+  const res = load(loc, 'resources');
+  full.push(`### ${res.heading}`);
+  full.push(res.intro);
+  for (const a of res.articles) {
+    full.push(`#### ${a.title} (${a.date})`);
+    full.push(a.summary);
+    for (const b of a.blocks) {
+      if (b.h) full.push(`##### ${b.h}`);
+      else if (b.ul) for (const item of b.ul) full.push(`- ${item}`);
+      else if (b.p) full.push(b.p);
+    }
+  }
   full.push('');
 }
 writeFileSync(join(dist, 'llms-full.txt'), full.join('\n'));

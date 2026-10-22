@@ -353,3 +353,15 @@ a { color: var(--blue); }
 .guide-card .guide-check strong { color: var(--blue-dark); }
 @media (min-width: 720px) { .guide-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) { .guide-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* Resources (guides & articles) */
+a.guide-card { display: block; text-decoration: none; color: inherit; transition: box-shadow .2s ease; }
+a.guide-card:hover { box-shadow: var(--shadow); }
+.resource-card .card-meta { font-size: 0.85rem; color: var(--muted); margin: 0 0 0.5rem; }
+.resource-card .card-link { color: var(--cta-dark); font-weight: 700; font-size: 1.05rem; }
+.article-body .back-link { font-weight: 600; text-decoration: none; }
+.article-body .article-meta { color: var(--muted); font-size: 0.92rem; margin-bottom: 1.8rem; }
+.article-body h2 { font-size: 1.4rem; margin: 2.2rem 0 0.5rem; }
+.article-body p { line-height: 1.8; }
+.article-list { margin: 0 0 1.2rem; padding-left: 1.3rem; line-height: 1.8; }
+.article-list li { margin-bottom: 0.45rem; }

@@ -77,6 +77,11 @@
    "label": "Network Care"
   },
   {
+   "href": "/resources/",
+   "id": "resources",
+   "label": "Resources"
+  },
+  {
    "href": "/about/",
    "id": "about",
    "label": "About"

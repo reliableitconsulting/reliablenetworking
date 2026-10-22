@@ -77,6 +77,11 @@
    "label": "网络运维"
   },
   {
+   "href": "/resources/",
+   "id": "resources",
+   "label": "干货分享"
+  },
+  {
    "href": "/about/",
    "id": "about",
    "label": "关于我们"
