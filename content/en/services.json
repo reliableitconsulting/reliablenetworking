@@ -22,17 +22,18 @@
     },
     {
      "cta": "Request a Free Consultation",
-     "desc": "Expert guidance for office expansions, new offices, modernization, and infrastructure planning.",
+     "desc": "Network consultation and project planning — expert guidance for office expansions, new offices, modernization, and infrastructure planning.",
      "id": "consulting-planning",
      "includes": [
+      "Network consultation",
       "Office expansion planning",
       "New office planning",
       "Network modernization",
       "Infrastructure review",
       "Vendor evaluation",
-      "Project planning",
       "ISP and backup-Internet planning",
-      "Relocation timeline and readiness checklist"
+      "Relocation timeline and readiness checklist",
+      "Project planning"
      ],
      "name": "Consulting & Project Planning",
      "price": "Custom Quote"
@@ -142,7 +143,7 @@
     },
     {
      "cta": "Request a Free Consultation",
-     "desc": "See what's happening on your network — before problems find you.",
+     "desc": "Network monitoring services for Greater Seattle businesses — see what's happening on your network before problems find you.",
      "id": "monitoring-setup",
      "includes": [
       "Device onboarding",
@@ -233,7 +234,7 @@
     },
     {
      "cta": "Request a Free Consultation",
-     "desc": "Advanced networking services for complex environments.",
+     "desc": "Network engineering services for complex environments — architecture, routing and switching, BGP, SD-WAN, and multi-site design.",
      "id": "enterprise-network-engineering",
      "includes": [
       "Network architecture",
@@ -271,7 +272,7 @@
  "intro": "Start with the problem: slow Wi-Fi, a new office or move, an aging firewall, no backup Internet, or no one watching the network. We scope the fix around your site, team and budget—every engagement is custom-quoted after a free consultation.",
  "seo": {
   "title": "Seattle Network Services: Wi-Fi, Office Setup, Security & Backup Internet | Reliable IT Consulting",
-  "description": "Problem-led network services in Greater Seattle: slow Wi-Fi fixes, office setup and moves, firewall/VPN security checkups, backup Internet, cabling, monitoring and Network Care. Custom quotes."
+  "description": "Problem-led network services in Greater Seattle: network consultation, network engineering services, slow Wi-Fi fixes, office setup and moves, firewall/VPN security checkups, backup Internet, cabling, network monitoring and Network Care. Custom quotes."
  },
  "faq": {
   "heading": "Network Services FAQs",
