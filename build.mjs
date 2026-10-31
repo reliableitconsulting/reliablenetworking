@@ -11,6 +11,10 @@ const config = JSON.parse(readFileSync(join(root, 'site.config.json'), 'utf8'));
 const esc = (s) =>
   String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
+/** Render [label](https://...) as an external link; everything else stays escaped. */
+const linkify = (s) =>
+  esc(s).replace(/\[([^\]]+)\]\((https:\/\/[^)\s"']+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+
 /** Prefix internal hrefs with /zh for the Chinese locale. */
 const L = (locale, href) => {
   if (!href || !href.startsWith('/') || href.startsWith('//')) return href;
@@ -558,9 +562,9 @@ function renderArticleMain({ locale, site, c, article }) {
   const meta = `${r.labels.categories[article.category] || ''} · ${formatDate(locale, article.date)} · ${readMinutes(article, locale)} ${esc(r.labels.minRead)}`;
   const blocks = article.blocks
     .map((b) => {
-      if (b.h) return `<h2>${esc(b.h)}</h2>`;
-      if (b.ul) return `<ul class="article-list">${b.ul.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`;
-      return `<p>${esc(b.p || '')}</p>`;
+      if (b.h) return `<h2>${linkify(b.h)}</h2>`;
+      if (b.ul) return `<ul class="article-list">${b.ul.map((i) => `<li>${linkify(i)}</li>`).join('')}</ul>`;
+      return `<p>${linkify(b.p || '')}</p>`;
     })
     .join('\n');
   return `${pageHero(article.title, null)}
