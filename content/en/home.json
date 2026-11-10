@@ -45,9 +45,10 @@
  "hero": {
   "credibility": "Network specialists • Enterprise engineering depth • English & Mandarin support",
   "eyebrow": "Greater Seattle Area • Remote Consulting Available",
-  "headline": "Business Networks That Stay Fast, Secure and Manageable",
+  "headline": "CCIE-Led Network Engineering & Security Consulting",
   "image": "/assets/img/hero-network.jpg",
   "imageAlt": "Enterprise network infrastructure with connected server racks and network topology",
+  "intro": "We design and support enterprise-grade networks for small businesses and small data centers: Cisco routing and switching, BGP and OSPF, Palo Alto firewalls, and remote network design reviews. Project work is by appointment — book a free consultation and we'll scope your network, on site or remotely.",
   "primaryCta": "Request a Free Consultation",
   "primaryCtaHref": "/contact/",
   "secondaryCta": "Explore Our Services",
@@ -63,7 +64,7 @@
   "text": "From professional offices and medical practices to restaurants, warehouses, schools, and multi-location businesses, we design networks around the way your organization operates."
  },
  "seo": {
-  "title": "Seattle Network Consulting for Businesses | Reliable IT Consulting",
+  "title": "Network Engineering Services | CCIE-Led Consulting | Reliable Networking",
   "description": "Greater Seattle network consulting for growing businesses: office Wi-Fi, new-office setup, firewall/VPN security, backup Internet, cabling and 24/7 automated monitoring. English & Mandarin support."
  },
  "why": {

@@ -45,9 +45,10 @@
  "hero": {
   "credibility": "网络专项服务 • 企业级工程能力 • 中英文支持",
   "eyebrow": "大西雅图地区 • 支持远程咨询",
-  "headline": "让企业网络跑得快、守得住、管得清",
+  "headline": "CCIE 领衔的网络工程与安全咨询",
   "image": "/assets/img/hero-network.jpg",
   "imageAlt": "企业网络基础设施：互联的服务器机柜与网络拓扑",
+  "intro": "我们为中小企业和小型数据中心设计、搭建并守护企业级网络：Cisco 路由交换、BGP 与 OSPF、Palo Alto 防火墙，以及远程网络设计评审。项目支持采用预约制——预约免费咨询，我们会在线上或现场为您的网络做评估规划。",
   "primaryCta": "预约免费咨询",
   "primaryCtaHref": "/contact/",
   "secondaryCta": "查看服务",
@@ -63,7 +64,7 @@
   "text": "从专业办公室、医疗诊所，到餐厅、仓库、学校和多门店企业，我们围绕您组织的实际运营方式设计网络。"
  },
  "seo": {
-  "title": "西雅图企业网络咨询与办公网络搭建 | Reliable IT Consulting",
+  "title": "网络工程服务 | CCIE 领衔咨询 | Reliable Networking",
   "description": "大西雅图企业网络咨询：办公室 Wi-Fi、新办公室组网、防火墙/VPN 安全、备用互联网、综合布线与 7×24 自动监控，中英文服务，覆盖 Seattle、Bellevue、Redmond。"
  },
  "why": {

@@ -266,6 +266,7 @@ function renderHome({ locale, site, c }) {
       <p class="eyebrow">${esc(hero.eyebrow)}</p>
       <h1>${esc(hero.headline)}</h1>
       <p class="lede">${esc(hero.sub)}</p>
+      ${hero.intro ? `<p class="lede">${esc(hero.intro)}</p>` : ''}
       <div class="btn-row">
         <a class="btn btn-cta" href="${esc(L(locale, hero.primaryCtaHref))}">${esc(hero.primaryCta)}</a>
         <a class="btn btn-outline-light" href="${esc(L(locale, hero.secondaryCtaHref))}">${esc(hero.secondaryCta)}</a>
